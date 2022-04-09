@@ -11,13 +11,25 @@
 
           gtag('config', 'G-NXPZG00ME4');
         </script>
+
+        <script>
+            function trackback_home_page1_button(){
+                // 送出事件紀錄
+                gtag("event", "回到首頁", {
+                    "event_category":"back_home",
+                    "event_label":"回到首頁(page1_button)",
+                    "value": 1
+                });
+                //alert("Event Sent!");
+            }
+        </script>
     </head>
 
     <body>
         <label style="color: red">
             My Second Page. Back 
             <br>
-            <a href="main.html">Home</a>
+            <a href="main.html" onclick="trackback_home_page1_button();">Home</a>
         </label> 
     </body>
 </html>
